@@ -1,0 +1,21 @@
+class Solution {
+public:
+    int findDuplicate(vector<int>& nums) {
+
+		//length of array
+
+		int n= nums.size();    
+		
+		//sort this array to find number easily
+    
+		sort(nums.begin(),nums.end());
+		
+		//Iterate through the sorted array and check for duplicates
+       
+		for(int i=1;i<n;i++){
+        if(nums[i]==nums[i-1]) 
+         return nums[i];
+    }
+    return -1;
+    }
+};
