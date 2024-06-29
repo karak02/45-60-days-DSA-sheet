@@ -1,3 +1,26 @@
+/*Approach
+This code implements a function setZeroes that modifies a given matrix in-place by setting entire rows and columns to zero based on the presence of zeroes in the original matrix.
+
+Here's an explanation of the approach used in the code:
+
+Flagging Rows and Columns with Zeroes:
+
+The code iterates through each element of the matrix.
+If an element at position (i, j) is zero, it sets the first element of the corresponding row (matrix[i][0]) and the first element of the corresponding column (matrix[0][j]) to zero as well. Additionally, it sets a flag cols to zero if the zero is encountered in the first column (to avoid overwriting the first column with zeroes prematurely).
+This process flags the rows and columns that need to be zeroed out.
+Setting Zeroes:
+
+The code iterates through the matrix again, starting from the second row and the second column (i.e., skipping the first row and column).
+For each element at position (i, j), if either the first element of the corresponding row (matrix[i][0]) or the first element of the corresponding column (matrix[0][j]) is zero, it sets the current element to zero.
+This step ensures that rows and columns flagged for zeroing are properly zeroed out.
+Zeroing First Row and Column:
+
+Finally, the code checks if the first row or the first column needs to be zeroed out based on the values of matrix[0][0] and the cols flag.
+If matrix[0][0] is zero, it zeroes out the entire first row.
+If cols is zero, it zeroes out the entire first column.
+By following this approach, the code effectively modifies the given matrix in-place by setting entire rows and columns to zero based on the presence of zeroes in the original matrix.*/
+
+
 class Solution {
 public:
     void setZeroes(vector<vector<int>>& matrix) {
