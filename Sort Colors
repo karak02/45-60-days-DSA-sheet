@@ -1,4 +1,4 @@
-//*** use Dutch National Flag Algoritham***//
+///*** use Dutch National Flag Algoritham***///
 /*The algorithm works by maintaining three pointers: low, mid, and high.
 The low pointer points to the beginning of the array, the high pointer points to the end of the array,
 and the mid pointer starts at the beginning of the array and moves through it.*/
